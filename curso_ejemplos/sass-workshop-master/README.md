@@ -120,7 +120,7 @@ y, la fuente que usaremos será **Arial**.
 
 Lo que haremos para definir estas *variables* en nuestro archivo `styles.scss` es escribir lo siguiente:
 
-```
+```scss
 $green: #99DDCC;
 $pink: #FA91A7;
 $yellow: #D9E540;
@@ -138,13 +138,13 @@ Podemos notar que nuestro Header debe ocupar todo el ancho de nuestra página (t
 
 * En el archivo HTML escribiremos lo siguiente:
 
-```
+```html
 <nav class="header">Medellín CSS</nav>
 ```
 
 * En el archivo SCSS escribiremos lo siguiente:
 
-```
+```scss
 .header {
   background-color: $green;
   color: $white;
@@ -163,7 +163,7 @@ Podemos notar que nuestro Header debe ocupar todo el ancho de nuestra página (t
 
 Puedes notar que tenemos: `font-family`, `font-size`, `font-weight` y con SASS podemos escribir eso así:
 
-```
+```scss
 font: {
     family: $font-arial;
     size: 18px;
@@ -173,7 +173,7 @@ font: {
 
 Así que nuestra clase `.header` quedaría:
 
-```
+```scss
 .header {
   background-color: $green;
   color: $white;
@@ -194,7 +194,7 @@ Así que nuestra clase `.header` quedaría:
 
 Sin embargo, si pensamos a futuro vamos a notar que necesitaremos centrar elementos usando `display: flex`, por lo que sería útil hacer una clase que centre elementos y así poderla reutilizar más adelante. Por lo tanto, crearemos una clase llamada `.center` con lo siguiente:
 
-```
+```scss
 .center {
   display: flex;
   align-items: center;
@@ -204,7 +204,7 @@ Sin embargo, si pensamos a futuro vamos a notar que necesitaremos centrar elemen
 
 Y, en nuestra clase `.header` vamos a heredar de `.center` usando `@extend` así:
 
-```
+```scss
 .header {
   @extend .center;
   background-color: $green;
@@ -223,7 +223,7 @@ Y, en nuestra clase `.header` vamos a heredar de `.center` usando `@extend` así
 
 También podemos sacar dos clases más para poderlas reutilizar más adelante:
 
-```
+```scss
 .size-container {
   width: 100%;
   height: 80px;
@@ -237,7 +237,7 @@ También podemos sacar dos clases más para poderlas reutilizar más adelante:
 
 Finalmente, nuestra clase `.header` quedaría:
 
-```
+```scss
 .header {
   @extend .center;
   @extend .size-container;
@@ -260,7 +260,7 @@ Finalmente, nuestra clase `.header` quedaría:
 
 * En el archivo HTML escribiremos lo siguiente:
 
-```
+```html
 <section class="main">
   <img src="./assets/main-image.png" alt="Main Image">
 </section>
@@ -268,7 +268,7 @@ Finalmente, nuestra clase `.header` quedaría:
 
 * En el archivo SCSS escribiremos lo siguiente:
 
-```
+```scss
 .main {
   img {
     width: 100%;
@@ -285,7 +285,7 @@ Finalmente, nuestra clase `.header` quedaría:
 
 * En el archivo HTML escribiremos lo siguiente:
 
-```
+```html
 <section class="search">
   <div class="search__title">Search</div>
   <div class="search__input">
@@ -299,7 +299,7 @@ El ícono lo puedes sacar de Font Awesome. Puedes escoger el ícono que más te 
 
 * En el archivo SCSS escribiremos lo siguiente:
 
-```
+```scss
 .search {
   &__title {
     @extend .center;
@@ -343,25 +343,25 @@ Lo que va a cambiar será la ubicación de los elementos en las diferentes filas
 
 En Web:
 
-|  Column 1 |  Column 2 |   |  
+|  Column 1 |  Column 2 |   |
 |---|---|---|
-| Imagen Cangrejo | Descripción Mariposa | **Row 1** |  
-| Imagen Cangrejo | Imagen Mariposa | **Row 2** |  
-| Imagen Cangrejo | Imagen Mariposa | **Row 3** |  
-| Descripción Mariposa | Imagen Mariposa  | **Row 4** |  
+| Imagen Cangrejo | Descripción Mariposa | **Row 1** |
+| Imagen Cangrejo | Imagen Mariposa | **Row 2** |
+| Imagen Cangrejo | Imagen Mariposa | **Row 3** |
+| Descripción Mariposa | Imagen Mariposa  | **Row 4** |
 
 En Mobile:
 
-|  Column 1 |  Column 2 |   |  
+|  Column 1 |  Column 2 |   |
 |---|---|---|
-| Imagen Cangrejo | Descripción Mariposa | **Row 1** |  
-| Imagen Cangrejo | Descripción Mariposa | **Row 2** |  
-| Descripción Mariposa | Imagen Mariposa | **Row 3** |  
-| Descripción Mariposa | Imagen Mariposa  | **Row 4** |  
+| Imagen Cangrejo | Descripción Mariposa | **Row 1** |
+| Imagen Cangrejo | Descripción Mariposa | **Row 2** |
+| Descripción Mariposa | Imagen Mariposa | **Row 3** |
+| Descripción Mariposa | Imagen Mariposa  | **Row 4** |
 
 * En el archivo HTML escribiremos lo siguiente:
 
-```
+```html
 <section class="ps">
   <img class="ps__img--primary" src="./assets/crab.png" alt="Crab">
   <div class="ps__description--primary">
@@ -376,7 +376,7 @@ En Mobile:
 
 * En el archivo SCSS escribiremos lo siguiente:
 
-```
+```scss
 .ps {
   width: 100%;
   height: 900px;
@@ -435,7 +435,7 @@ Donde `$break-small` será otra variable junto a nuestra paleta de colores con e
 
 * En el archivo HTML escribiremos lo siguiente:
 
-```
+```html
 <section class="ss">
   <img class="ss__img--primary" src="./assets/cat.png" alt="Cat">
   <div class="ss__container">
@@ -450,9 +450,9 @@ Donde `$break-small` será otra variable junto a nuestra paleta de colores con e
 </section>
 ```
 
-* En el archivo SCSS escribiremos lo siguiente:
+* En el archivo SCSS escribiremos lo siguiente:html
 
-```
+```scss
 .ss {
   width: 100%;
   height: 900px;
@@ -509,7 +509,7 @@ Donde `$break-small` será otra variable junto a nuestra paleta de colores con e
 
 * En el archivo HTML escribiremos lo siguiente:
 
-```
+```html
 <footer class="footer">
   <p>
     <span>Created by</span><br>@myuser
@@ -519,7 +519,7 @@ Donde `$break-small` será otra variable junto a nuestra paleta de colores con e
 
 * En el archivo SCSS escribiremos lo siguiente:
 
-```
+```scss
 .footer {
   @extend .center;
   @extend .size-container;
