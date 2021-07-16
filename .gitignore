@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-./curso_ejemplos/sass-workshop-master
+./curso_ejemplos/sass-workshop-master/readme-assets/*.gif
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

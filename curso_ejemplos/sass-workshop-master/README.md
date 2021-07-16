@@ -55,13 +55,13 @@ Aquí te presentamos la estructura de nuestra Landing Page. Para este caso, esco
 
 > Mockup Link: https://goo.gl/Qbngyz
 
-<img src="./readme-assets/landing-web.gif" alt="Landing Page Web" width="500" />
+
 
 * ## Landing Page | Diseño Móvil
 
 > Mockup Link: https://goo.gl/gGkwDq
 
-<img src="./readme-assets/landing-mobile.gif" alt="Landing Page Mobile" width="500" />
+
 
 ## 5. Definición de elementos
 
